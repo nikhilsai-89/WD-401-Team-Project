@@ -1,0 +1,173 @@
+/* styles.css */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Base styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.logo {
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+    color: #adadad;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    margin-right: 20px;
+    /* width: 200px; */
+    /* border-radius: 20px; */
+}
+
+.search-box input {
+    padding: 5px;
+    border: none;
+    width: 500px;
+    
+}
+
+.search-box button {
+    background-color: #0074cc;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+
+.nav-list li {
+    margin-right: 20px;
+    background-color: #adadad;
+    border-radius: 30px;
+    padding: 10px;
+    
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    color: black;
+}
+.ques{
+    background-color: #ffbf00;
+    padding: 150px;
+    animation: slide-up 1.0s;
+    /* margin-left: 100px; */
+}
+.ques p{
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 50px;
+    margin-left: 200px;
+    font-family: 'Dancing Script', cursive;
+    animation: slide-up 3.0s ease forwards;
+}
+.font_Dancing{
+    font-family: 'Dancing Script', cursive;
+}
+
+
+.arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 75px solid #000000; /* Change the color as needed */
+    animation: bounce-down 10s infinite,slide-up 3.0s ease forwards;
+
+}
+
+
+
+.flex-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-top .piano,
+.flex-top .guitar{
+    width: 50%;
+}
+.piano{
+    background-color: #0074cc;
+}
+.flex-top img{
+    width: 300px;
+}
+
+@keyframes bounce-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px); /* Adjust the bounce distance */
+    }
+}
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0); /* Move to the original position */
+    }
+}
+
+/* Apply the animation to the targeted paragraph */
+
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .search-box {
+        flex-grow: 1;
+    }
+
+    .search-box input {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    .nav-list {
+        margin-top: 10px;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .nav-list li {
+        margin-right: 0;
+    }
+    
+}
